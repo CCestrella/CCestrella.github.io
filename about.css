@@ -1,0 +1,211 @@
+html {
+    box-sizing: border-box;
+    font-size: 16px;
+    font-family: "Inter", sans-serif;
+    color: var(--black);
+    scroll-behavior: smooth;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Rubik", sans-serif;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ol,
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+img {
+    display: block;
+}
+
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+/* Utilities */
+.display-none {
+    display: none;
+}
+
+body {
+    background-color: #E5E8EBff;
+    font-family: "Poppins", sans-serif;
+}
+
+
+
+.container {
+    width: 80%;
+    max-width: 1200px;
+    margin: 50px auto;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.header {
+    background-color: #f5b800;
+    border-radius: 10px;
+    padding: 10px 20px;
+    margin-bottom: 20px;
+    width: 30%;
+    font font-family: "Poppins", sans-serif;
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 48px;
+    color: #161515;
+}
+
+.header h2 {
+    font-size: 14px;
+}
+
+/*start of the slider*/
+.container2 {
+    padding: 2rem;
+}
+
+.slider-wrapper {
+    position: relative;
+    max-width: 48rem;
+    margin: 0 auto;
+}
+
+.slider {
+    display: flex;
+    aspect-ratio: 16 / 9;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    box-shadow: 0 1.5rem 3rem -0.75rem hsla(0, 0%, 0%, 0.25);
+    border-radius: 0.5rem;
+}
+
+/* .slider img {
+    flex: 1 0 100%;
+    scroll-snap-align: start;
+    object-fit: cover;
+} */
+
+.slider-nav {
+    display: flex;
+    column-gap: 1rem;
+    position: absolute;
+    bottom: 1.25rem;
+    left: 50%;
+    transform: translate(50%);
+    z-index: 1;
+}
+
+.slider-nav a {
+    width: 0.5rem;
+    height: 0.5rem;
+    border-radius: 50%;
+    background-color: #fff;
+    opacity: 0.75;
+    transition: opacity ease 250ms;
+}
+
+.slider-nav a:hover {
+    opacity: 1;
+}
+
+/* Desktop Navigation */
+.desktop-nav {
+    background-color: #14130B;
+    box-shadow: 2px 2px 5px rgb(0, 0, 0, 0.1);
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    z-index: 1000;
+    border-radius: 10px;
+    padding: 10px 20px;
+}
+
+.desktop-nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+.desktop-nav li {
+    display: inline-block;
+    padding: 0 10px;
+}
+
+.desktop-nav a {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    color: #f6bc4a;
+    transition: background-color 200ms ease-in-out;
+    padding: 10px 20px;
+}
+
+.desktop-nav a:hover,
+.desktop-nav a:focus {
+    background-color: #f6bc4a;
+    color: #14130B;
+}
+
+/* Hamburger Button */
+.hamburger-button,
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 30px;
+    cursor: pointer;
+    padding: 20px;
+}
+
+/* Container positioning adjustments */
+.container {
+    margin-top: 100px;
+    /* Adjusted to account for the fixed header */
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+@media (min-width: 769px) {
+    .container {
+        margin-top: 150px;
+    }
+}

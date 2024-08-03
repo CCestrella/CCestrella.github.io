@@ -107,7 +107,8 @@ body {
     min-height: 100vh;
     text-align: center;
     flex-direction: column;
-    margin-top: 50px; /* Adjusted for the fixed header */
+    margin-top: 50px;
+    /* Adjusted for the fixed header */
 }
 
 .hero h1 {
@@ -146,25 +147,28 @@ body {
 /* Desktop view adjustments */
 @media (min-width: 769px) {
     .container {
-        position: absolute; /* Position it at the bottom */
+        position: absolute;
+        /* Position it at the bottom */
         bottom: 0;
         left: 0;
         right: 0;
         padding: 80px 0 0 80px;
         margin-top: -175px;
-        
+
     }
 }
 
 /* Mobile view adjustments */
 @media (max-width: 768px) {
+
     .hamburger-button,
     .menu-toggle {
         display: block;
     }
 
     .desktop-nav ul {
-        display: none; /* Initially hidden */
+        display: none;
+        /* Initially hidden */
         flex-direction: column;
         background-color: #1F221B;
         color: #FABE4B;
@@ -175,8 +179,9 @@ body {
         right: 0px;
     }
 
-    .menu-toggle:checked + .hamburger-button + .desktop-nav ul {
-        display: flex; /* Show menu when checkbox is checked */
+    .menu-toggle:checked+.hamburger-button+.desktop-nav ul {
+        display: flex;
+        /* Show menu when checkbox is checked */
     }
 
     .desktop-nav li {
@@ -200,13 +205,19 @@ body {
     }
 
     .container {
-        position: absolute; /* Position it absolutely */
-        top: 10px; /* Align it at the top */
-        right: 10px; /* Align it to the right */
+        position: absolute;
+        /* Position it absolutely */
+        top: 10px;
+        /* Align it at the top */
+        right: 10px;
+        /* Align it to the right */
         flex-direction: row;
         align-items: flex-start;
         justify-content: flex-end;
         font-size: 25px;
         margin: 30px 20px 20px 20px;
-        
+    }
+
+    .menu-toggle {
+        visibility: hidden;
     }

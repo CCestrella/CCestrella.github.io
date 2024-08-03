@@ -78,7 +78,7 @@ body {
     border-radius: 10px;
     padding: 10px 20px;
     margin-bottom: 20px;
-    width: 30%;
+    width: 65%;
     font font-family: "Poppins", sans-serif;
 }
 
@@ -90,6 +90,15 @@ body {
 
 .header h2 {
     font-size: 14px;
+}
+
+.h3 {
+    background-color: #f5b800;
+    border-radius: 10px;
+    padding: 10px 20px;
+    margin-bottom: 20px;
+    width: 65%;
+    font font-family: "Poppins", sans-serif;
 }
 
 /*start of the slider*/
@@ -208,4 +217,44 @@ body {
     .container {
         margin-top: 150px;
     }
+
+    /* .contact-form */
+    .contact-form {
+        padding: 48px 16px;
+        border-radius: 10px;
+        margin: 5px 10px;
+    }
+
+    .contact-form input,
+    .contact-form select {
+        display: block;
+        width: 100%;
+        padding: 8px;
+        margin-bottom: 16px;
+    }
+
+    .contact-form textarea {
+        display: block;
+        width: 100%;
+        padding: 8px;
+    }
+
+    .contact-form label {
+        display: block;
+        width: 100%;
+    }
+
+    .contact-form h2 {
+        color: var(--base-dark);
+        margin-bottom: 16px;
+    }
+
+    .contact-form input[type="submit"] {
+        background-color: var(--action);
+        border: 0;
+        margin-top: 8px;
+        cursor: pointer;
+    }
+
+
 }

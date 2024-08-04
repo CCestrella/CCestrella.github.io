@@ -13,7 +13,7 @@ Christin Estrella - Portfolio
 
 - [ ] Functional Contact Form: I added required fields to the contact form, ensuring that users must provide their name and email before submitting. This is important because it helps me ensure that I can follow up with users effectively and reduces the likelihood of receiving incomplete or anonymous inquiries. I also fixed my hamburger on  the top for both dekstop and mobile view for easy access.
  #### Contact Page
-![Put a description of your image here](Repo_img/19.jpeg)
+![Put a description of your image here](Repo_img/20.jpeg)
        #### Contact Page
 ![Put a description of your image here](Repo_img/16.jpeg)
 

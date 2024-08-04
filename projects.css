@@ -1,0 +1,230 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+/* Reset CSS */
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ol,
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+body {
+    background-color: #E5E8EB;
+    font-family: "Poppins", sans-serif;
+    min-height: 100vh;
+    margin: 0;
+}
+
+/* Desktop Navigation */
+.desktop-nav {
+    background-color: #14130B;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.desktop-nav ul {
+    width: 100%;
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin: 0;
+    padding: 10px 20px;
+}
+
+.desktop-nav li {
+    height: 50px;
+    flex-direction: row;
+    display: inline-block;
+    padding: 0 10px;
+}
+
+.desktop-nav a {
+    height: 100%;
+    padding: 0 20px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    color: #f6bc4a;
+    transition: background-color 200ms ease-in-out;
+}
+
+.desktop-nav a:hover,
+.desktop-nav a:focus {
+    background-color: #f6bc4a;
+    color: #14130B;
+}
+
+/* Hamburger Button */
+.hamburger-button,
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 30px;
+    cursor: pointer;
+    padding: 20px;
+}
+
+/* Mobile view adjustments */
+@media (max-width: 768px) {
+
+    .hamburger-button,
+    .menu-toggle {
+        display: block;
+    }
+
+    .desktop-nav ul {
+        display: none;
+        flex-direction: column;
+        background-color: #1F221B;
+        color: #FABE4B;
+        padding: 10px 20px;
+        border-radius: 10px;
+        position: absolute;
+        top: 60px;
+        right: 0;
+    }
+
+    .menu-toggle:checked+.hamburger-button+.desktop-nav ul {
+        display: flex;
+        /* Show menu when checkbox is checked */
+    }
+
+    .desktop-nav li {
+        padding: 10px 0;
+    }
+
+    .desktop-nav a {
+        padding: 10px;
+        font-size: 18px;
+    }
+}
+
+.menu-toggle {
+    visibility: hidden;
+}
+
+/* Projects */
+.projects {
+    background-color: #f6bc4a;
+    border-radius: 10px;
+    padding: 15px 25px;
+    width: 80%;
+    max-width: 1200px;
+    margin: 50px auto;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    text-transform: uppercase;
+    margin-top: 150px;
+}
+
+.project-box {
+    border-bottom: 1px solid #14130B;
+}
+
+.project-box:last-child {
+    border-bottom: none;
+}
+
+.project-img {
+    margin-bottom: 25px;
+    max-width: 100%;
+}
+
+.project-header {
+    color: #14130B;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.marketing-projects {
+    margin: 50px 0 25px;
+    color: #14130B;
+}
+
+.marketing-projects-item {
+    font-weight: 600;
+    letter-spacing: 1px;
+    font-size: 12px;
+    line-height: 1.5;
+    padding: 15px 0;
+    border-top: 1px solid #1F221B;
+}
+
+.marketing-projects-item:last-child {
+    border-bottom: 1px solid #1F221B;
+}
+
+.call-to-action {
+    background-color: #14130B;
+    border: 1px solid #CCCCCC;
+    border-radius: 10px;
+    color: #DBE026;
+    display: inline-block;
+    padding: 15px 35px;
+    text-decoration: none;
+    margin: 25px 0;
+    transition: background-color 200ms ease-in-out;
+}
+
+.call-to-action:hover,
+.call-to-action:focus {
+    background-color: #CCCCCC;
+    color: #14130B;
+}
+
+@media (min-width: 900px) {
+    .projects {
+        flex-direction: row;
+    }
+
+    .project-box {
+        border-bottom: none;
+        border-right: 1px solid #14130B;
+        padding: 25px 50px;
+    }
+
+    .project-box:last-child {
+        border-right: none;
+    }
+}

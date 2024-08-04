@@ -45,7 +45,6 @@ body {
     font-family: "Poppins", sans-serif;
 }
 
-
 /* Desktop Navigation */
 .desktop-nav {
     background-color: #14130B;
@@ -154,7 +153,6 @@ body {
         right: 0;
         padding: 80px 0 0 80px;
         margin-top: -175px;
-
     }
 }
 
@@ -168,7 +166,6 @@ body {
 
     .desktop-nav ul {
         display: none;
-        /* Initially hidden */
         flex-direction: column;
         background-color: #1F221B;
         color: #FABE4B;
@@ -206,11 +203,8 @@ body {
 
     .container {
         position: absolute;
-        /* Position it absolutely */
         top: 10px;
-        /* Align it at the top */
         right: 10px;
-        /* Align it to the right */
         flex-direction: row;
         align-items: flex-start;
         justify-content: flex-end;
@@ -221,3 +215,4 @@ body {
     .menu-toggle {
         visibility: hidden;
     }
+}

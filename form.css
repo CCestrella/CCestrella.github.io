@@ -61,16 +61,15 @@ body {
     font-family: "Poppins", sans-serif;
 }
 
+/* Desktop Navigation */
 .desktop-nav {
     background-color: #14130B;
-    box-shadow: 2px 2px 5px rgb(0, 0, 0, 0.1);
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
     position: fixed;
     top: 0;
-    right: 0;
+    left: 0;
     width: 100%;
     z-index: 1000;
-    border-radius: 10px;
-    padding: 10px 20px;
 }
 
 .desktop-nav ul {
@@ -79,21 +78,25 @@ body {
     justify-content: flex-end;
     align-items: center;
     margin: 0;
-    padding: 0;
+    padding: 10px 20px;
+    width: 100%;
+
 }
 
 .desktop-nav li {
+    height: 50px;
     display: inline-block;
     padding: 0 10px;
 }
 
 .desktop-nav a {
+    height: 100%;
+    padding: 0 20px;
     text-decoration: none;
     display: flex;
     align-items: center;
     color: #f6bc4a;
     transition: background-color 200ms ease-in-out;
-    padding: 10px 20px;
 }
 
 .desktop-nav a:hover,
@@ -121,6 +124,7 @@ body {
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: 150px;
 }
 
 html,
@@ -133,7 +137,7 @@ body {
 h1 {
     text-align: center;
     color: #14130B;
-    @include text-shadow(1px 1px 0 rgba(white, 1));
+    text-shadow: 1px 1px 0 rgba(white, 1);
 }
 
 form {
@@ -141,75 +145,110 @@ form {
     text-align: center;
     margin: 20px auto;
     border-radius: 10px;
-
-    input,
-    textarea {
-        border: 0;
-        outline: 0;
-        padding: 1em;
-        @include border-radius(8px);
-        display: block;
-        width: 100%;
-        margin-top: 1em;
-        font-family: "Poppins", sans-serif;
-        @include box-shadow(0 1px 1px rgba(black, 0.1));
-        resize: none;
-
-        &:focus {
-            @include box-shadow(0 0px 2px rgba($red, 1) !important);
-        }
-    }
-
-    #input-submit {
-        color: #14130B;
-        background: #E5E8EBff;
-        cursor: pointer;
-        border-radius: 10px;
-
-        &:hover {
-            @include box-shadow(0 1px 1px 1px rgba(#aaa, 0.6));
-        }
-    }
-
-    textarea {
-        height: 126px;
-    }
 }
 
+form input,
+form textarea {
+    border: 0;
+    outline: 0;
+    padding: 1em;
+    border-radius: 8px;
+    display: block;
+    width: 100%;
+    margin-top: 1em;
+    font-family: "Poppins", sans-serif;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+    resize: none;
+}
+
+form input:focus,
+form textarea:focus {
+    box-shadow: 0 0px 2px rgba(0, 0, 0, 0.2);
+}
+
+.input-submit {
+    color: #14130B;
+    background: #E5E8EBff;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: background-color 200ms ease-in-out;
+    padding: 1em;
+    border: none;
+}
+
+.input-submit:hover,
+.input-submit:focus {
+    background-color: #14130B;
+    color: #f6bc4a;
+}
+
+textarea {
+    height: 126px;
+}
+
+.cf {
+    display: flex;
+    flex-wrap: wrap;
+}
 
 .half {
-    float: left;
-    width: 48%;
-    margin-bottom: 1em;
+    flex: 1 1 calc(100% - -10em);
+    /* Adjusts width and spacing */
+    box-sizing: border-box;
 }
-
-.right {
-    width: 50%;
-}
-
-.left {
-    margin-right: 2%;
-}
-
 
 @media (max-width: 480px) {
     .half {
-        width: 100%;
-        float: none;
+        flex: 1 1 100%;
         margin-bottom: 0;
     }
 }
 
+/* Mobile view adjustments */
+@media (max-width: 768px) {
 
-/* Clearfix */
-.cf:before,
-.cf:after {
-    content: " ";
-    /* 1 */
-    display: table;
-    /* 2 */
-}
+    .hamburger-button,
+    .menu-toggle {
+        display: block;
+    }
 
-.cf:after {
-    clear: both;
-}
+    .desktop-nav ul {
+        display: none;
+        flex-direction: column;
+        background-color: #1F221B;
+        color: #FABE4B;
+        padding: 10px 20px;
+        border-radius: 10px;
+        position: absolute;
+        top: 60px;
+        right: 0;
+    }
+
+    .menu-toggle:checked+.hamburger-button+.desktop-nav ul {
+        display: flex;
+        /* Show menu when checkbox is checked */
+    }
+
+    .menu-toggle {
+        visibility: hidden;
+    }
+
+    .desktop-nav li {
+        padding: 10px 0;
+    }
+
+    .desktop-nav a {
+        padding: 10px;
+        font-size: 18px;
+    }
+
+    /* Clearfix */
+    .cf:before,
+    .cf:after {
+        content: " ";
+        display: table;
+    }
+
+    .cf:after {
+        clear: both;
+    }

@@ -1,6 +1,6 @@
-#  your_name_here - Portfolio Task
+Christin Estrella - Portfolio 
 ​
-[My portfolio site](https://ccestrella.github.io/)
+[View Portfolio](https://ccestrella.github.io/)
 ​
 ## Project Requirements
 
